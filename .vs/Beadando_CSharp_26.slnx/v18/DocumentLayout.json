@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\",
+  "WorkspaceRootPath": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\codes\\csharp\\beadando_csharp_26\\beadando_csharp_26\\movieprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\documents\\github\\beadando_csharp_26\\beadando_csharp_26\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|solutionrelative:beadando_csharp_26\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\documents\\github\\beadando_csharp_26\\beadando_csharp_26\\movieprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|solutionrelative:beadando_csharp_26\\movieprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\codes\\csharp\\beadando_csharp_26\\beadando_csharp_26\\owneventwaithandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\documents\\github\\beadando_csharp_26\\beadando_csharp_26\\owneventwaithandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|solutionrelative:beadando_csharp_26\\owneventwaithandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|c:\\users\\deakc\\codes\\csharp\\beadando_csharp_26\\beadando_csharp_26\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BD3DB2D-F524-AB02-CD7D-27A6B1E0BB3D}|Beadando_CSharp_26\\Beadando_CSharp_26.csproj|solutionrelative:beadando_csharp_26\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OwnEventWaitHandle.cs",
-              "DocumentMoniker": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\OwnEventWaitHandle.cs",
+              "DocumentMoniker": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\OwnEventWaitHandle.cs",
               "RelativeDocumentMoniker": "Beadando_CSharp_26\\OwnEventWaitHandle.cs",
-              "ToolTip": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\OwnEventWaitHandle.cs",
+              "ToolTip": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\OwnEventWaitHandle.cs",
               "RelativeToolTip": "Beadando_CSharp_26\\OwnEventWaitHandle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:28:48.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:28:48.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MovieProcessor.cs",
-              "DocumentMoniker": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\MovieProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\MovieProcessor.cs",
               "RelativeDocumentMoniker": "Beadando_CSharp_26\\MovieProcessor.cs",
-              "ToolTip": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\MovieProcessor.cs",
+              "ToolTip": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\MovieProcessor.cs",
               "RelativeToolTip": "Beadando_CSharp_26\\MovieProcessor.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowB4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T15:24:13.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\Program.cs",
               "RelativeDocumentMoniker": "Beadando_CSharp_26\\Program.cs",
-              "ToolTip": "C:\\Users\\deakc\\Codes\\CSharp\\Beadando_CSharp_26\\Beadando_CSharp_26\\Program.cs",
+              "ToolTip": "C:\\Users\\deakc\\Documents\\GitHub\\Beadando_CSharp_26\\Beadando_CSharp_26\\Program.cs",
               "RelativeToolTip": "Beadando_CSharp_26\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswIUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T13:34:13.325Z",
               "EditorCaption": ""

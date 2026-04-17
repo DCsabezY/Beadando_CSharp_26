@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 using System.Threading;
 
@@ -7,19 +8,22 @@ namespace Beadando_CSharp_26
     internal class MovieProcessor
     {
         private OwnConcurrentQueue _queue;
+        private OwnConcurrentQueue _allMovies;
         private OwnAutoResetEvent _movieAddedEvent;
         private bool _isRunning;
 
         public MovieProcessor()
         {
             _queue = new OwnConcurrentQueue();
+            _allMovies = new OwnConcurrentQueue();
             _movieAddedEvent = new OwnAutoResetEvent();
             _isRunning = true;
         }
 
         public void AddMovie(Movies movie)
         {
-            _queue.Add(movie);
+            _queue.Add(movie);         // feldolgozósorba
+            _allMovies.Add(movie);     // tartós tárolóba is
             Console.WriteLine($"Added: {movie.MovieTitle}");
             _movieAddedEvent.EventSet();
         }
@@ -96,5 +100,6 @@ namespace Beadando_CSharp_26
         }
 
         public OwnConcurrentQueue Queue => _queue;
+        public OwnConcurrentQueue AllMovies => _allMovies;
     }
 }

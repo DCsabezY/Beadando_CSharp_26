@@ -27,7 +27,7 @@ namespace Beadando_CSharp_26
                         LoadMoviesFromFile(processor);
                         break;
                     case "3":
-                        processor.Queue.PrintAllMovies();
+                        processor.AllMovies.PrintAllMovies();
                         break;
                     case "4":
                         PrintMoviesByGenre(processor);
@@ -36,9 +36,10 @@ namespace Beadando_CSharp_26
                         PrintMoviesByLength(processor);
                         break;
                     case "6":
-                        processor.Queue.CountMovies();
+                        processor.AllMovies.CountMovies();
                         break;
                     case "7":
+                        processor.AllMovies.ClearQueue();
                         processor.Queue.ClearQueue();
                         Console.WriteLine("Queue cleared.");
                         break;
@@ -128,7 +129,7 @@ namespace Beadando_CSharp_26
 
             Console.WriteLine();
             Console.WriteLine($"=== MOVIES IN GENRE: {genre} ===");
-            processor.Queue.PrintMoviesByGenre(genre);
+            processor.AllMovies.PrintMoviesByGenre(genre);
         }
 
         static void PrintMoviesByLength(MovieProcessor processor)
@@ -144,7 +145,7 @@ namespace Beadando_CSharp_26
 
             Console.WriteLine();
             Console.WriteLine($"=== MOVIES WITH LENGTH <= {length} ===");
-            processor.Queue.PrintMoviesByLength(length);
+            processor.AllMovies.PrintMoviesByLength(length);
         }
     }
 }
