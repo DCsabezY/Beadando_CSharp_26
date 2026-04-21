@@ -13,3 +13,41 @@ Werckmeister Harmonies;145;drama
 The Witness;104;political satire, comedy
 Kills on Wheels;105;black comedy, crime
 My 20th Century;102;comedy-drama, sci-fi
+Colonel Redl;144;historical drama
+Time Stands Still;99;drama
+Love;92;drama
+Confidence;105;crime, thriller
+The Red and the White;90;war drama
+Adoption;89;drama
+Iszkábák;78;black comedy
+Kontroll;105;thriller, dark comedy
+Glamour;96;drama
+Hukkle;75;mystery, black comedy
+Just Sex and Nothing Else;100;romantic comedy
+A Somewhat Gentle Man;107;crime, black comedy
+Dolina;88;drama
+Zimmer Feri;96;comedy
+Valami Amerika;105;romantic comedy
+Children of Glory;122;historical drama, romance
+Különös házasság;140;historical drama
+Szindbád;99;drama
+Eldorádó;92;comedy-drama
+Post Mortem;102;mystery, drama
+Forró vizet a kopasznak;88;comedy
+Hamvadó cigarettavég;110;crime, drama
+A nagy füzet;112;war drama
+Fehér tenyér;97;sports drama
+Sose halunk meg;90;comedy
+Sorstalanság;140;historical drama, war
+Viszontlátásra, majom!;83;comedy, drama
+The Corpse of Anna Fritz;76;thriller, horror
+Macskafogó;84;animated comedy
+Kell egy csaj;91;romantic comedy
+Budapest Noir;101;crime, noir
+Remélem, legközelebb sikerül;86;drama
+Különös éjszaka;93;thriller
+A tanú;105;political satire, comedy
+Utolsó jelentés Annáról;93;drama
+Blokád;79;political drama
+Csak szex és más semmi;100;romantic comedy
+Sátántangó;432;drama

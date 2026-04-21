@@ -4,16 +4,29 @@ using System.Threading;
 
 namespace Beadando_CSharp_26
 {
+    /// <summary>
+    /// A program belépési pontja.
+    /// 
+    /// Két szál fut párhuzamosan:
+    ///   - Főszál:        a menüt kezeli, filmeket vesz fel (producer szerepe)
+    ///   - consumerThread: feldolgozza a filmeket a háttérben (consumer szerepe)
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)
         {
             MovieProcessor processor = new MovieProcessor();
 
+            // Consumer szál létrehozása és indítása.
+            // A ConsumerWork() azonnal várakozni kezd a jelzőeszközön,
+            // amíg a főszál (producer) filmet nem ad hozzá.
             Thread consumerThread = new Thread(processor.ConsumerWork);
             consumerThread.Start();
+
             bool running = true;
 
+            // Főszál: menüt jelenít meg és kezeli a felhasználói bevitelt.
+            // Ez a producer oldal – itt keletkeznek a filmek.
             while (running)
             {
                 string choice = ShowMenu();
@@ -21,12 +34,15 @@ namespace Beadando_CSharp_26
                 switch (choice)
                 {
                     case "1":
+                        // Manuális filmfelvétel: a felhasználó egyenként adja meg az adatokat
                         AddMovieManually(processor);
                         break;
                     case "2":
+                        // Fájlból való betöltés: soronként olvassa be és adja hozzá a filmeket
                         LoadMoviesFromFile(processor);
                         break;
                     case "3":
+                        // Az összes film kilistázása a tartós tárolóból (_allMovies)
                         processor.AllMovies.PrintAllMovies();
                         break;
                     case "4":
@@ -36,9 +52,11 @@ namespace Beadando_CSharp_26
                         PrintMoviesByLength(processor);
                         break;
                     case "6":
+                        // A tartós tárolóban lévő filmek megszámlálása
                         processor.AllMovies.CountMovies();
                         break;
                     case "7":
+                        // Mindkét sort törli: a feldolgozót és a tartósat is
                         processor.AllMovies.ClearQueue();
                         processor.Queue.ClearQueue();
                         Console.WriteLine("Queue cleared.");
@@ -52,13 +70,27 @@ namespace Beadando_CSharp_26
                 }
             }
 
+            // Leállítási sorrend – FONTOS, hogy ebben a sorrendben történjen:
+
+            // 1. Stop(): jelzi a consumernek, hogy ne várjon több filmre
+            //    (ha ezt kihagynánk, a consumerThread örökre blokkolna -> deadlock)
             processor.Stop();
+
+            // 2. Join(): megvárjuk, amíg a consumer szál teljesen leáll.
+            //    Nélküle a program bezárhatná a jelzőeszközt, mielőtt
+            //    a consumer befejezte volna a munkáját.
             consumerThread.Join();
+
+            // 3. Close(): csak miután a consumer leállt, szabadítjuk fel
+            //    a jelzőeszköz erőforrásait – biztonságos sorrend.
             processor.Close();
 
             Console.WriteLine("Program finished.");
         }
 
+        /// <summary>
+        /// Megjeleníti a menüt és visszaadja a felhasználó választását.
+        /// </summary>
         static string ShowMenu()
         {
             Console.WriteLine();
@@ -75,6 +107,12 @@ namespace Beadando_CSharp_26
 
             return Console.ReadLine() ?? "";
         }
+
+        /// <summary>
+        /// Bekéri a film adatait a felhasználótól és hozzáadja a feldolgozóhoz.
+        /// Validálja a bevitelt: cím és műfaj nem lehet üres,
+        /// a hossznak pozitív egész számnak kell lennie.
+        /// </summary>
         static void AddMovieManually(MovieProcessor processor)
         {
             Console.Write("Movie title: ");
@@ -86,12 +124,14 @@ namespace Beadando_CSharp_26
             Console.Write("Movie genre: ");
             string? genre = Console.ReadLine();
 
+            // Üres cím vagy műfaj nem fogadható el
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(genre))
             {
                 Console.WriteLine("Title and genre cannot be empty.");
                 return;
             }
 
+            // A hossznak számnak kell lennie és pozitívnak
             if (!int.TryParse(lengthInput, out int length) || length <= 0)
             {
                 Console.WriteLine("Invalid movie length.");
@@ -99,9 +139,13 @@ namespace Beadando_CSharp_26
             }
 
             Movies movie = new Movies(title, length, genre);
+            // AddMovie: berakja a sorba ÉS jelzést küld a consumer szálnak
             processor.AddMovie(movie);
         }
 
+        /// <summary>
+        /// Bekéri a fájl elérési útját, majd átadja a processornak betöltésre.
+        /// </summary>
         static void LoadMoviesFromFile(MovieProcessor processor)
         {
             Console.Write("File path: ");
@@ -116,6 +160,9 @@ namespace Beadando_CSharp_26
             processor.LoadMoviesFromFile(fileName);
         }
 
+        /// <summary>
+        /// Bekéri a műfajt és kilistázza a hozzá tartozó filmeket.
+        /// </summary>
         static void PrintMoviesByGenre(MovieProcessor processor)
         {
             Console.Write("Genre: ");
@@ -132,6 +179,9 @@ namespace Beadando_CSharp_26
             processor.AllMovies.PrintMoviesByGenre(genre);
         }
 
+        /// <summary>
+        /// Bekéri a maximum hosszt és kilistázza az annál nem hosszabb filmeket.
+        /// </summary>
         static void PrintMoviesByLength(MovieProcessor processor)
         {
             Console.Write("Maximum length: ");

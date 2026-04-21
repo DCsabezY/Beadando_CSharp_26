@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Beadando_CSharp_26")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d33b6811098bfe8baf44d413641b1d6cd69940c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2912ce580a95ca44bcc58b93142d0bc9946734af")]
 [assembly: System.Reflection.AssemblyProductAttribute("Beadando_CSharp_26")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Beadando_CSharp_26")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
