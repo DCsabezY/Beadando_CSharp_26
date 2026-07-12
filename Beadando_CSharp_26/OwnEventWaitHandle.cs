@@ -5,10 +5,7 @@ using System.Threading;
 
 namespace Beadando_CSharp_26
 {
-    /// <summary>
-    /// Az EventWaitHandle osztály egy szálak várakozását vezérlő eszköz, amely lehetővé teszi a szálak közötti kommunikációt és koordinációt. 
-    /// Az OwnEventWaitHandle osztály egy egyszerű wrapper az EventWaitHandle osztály körül, amely lehetővé teszi a szálak közötti események kezelését.
-    /// </summary>
+    // Wrapper az EventWaitHandle köré, szálak közti jelzéshez.
     internal class OwnEventWaitHandle
     {
         private EventWaitHandle _handle;
@@ -17,23 +14,21 @@ namespace Beadando_CSharp_26
         {
             _handle = handle;
         }
-        //Az EventWait() metódus blokkolja a hívó szálat, amíg az esemény be nem állítódik.
+
+        // Blokkolja a hívó szálat, amíg valaki nem jelez a Set használatával.
         public void EventWait()
         {
             _handle.WaitOne();
         }
 
-        //Az EventSet() metódus pedig beállítja az eseményt, így feloldva a blokkolást.
         public void EventSet()
         {
             _handle.Set();
         }
 
-        //Az EventClose() metódus pedig felszabadítja az erőforrásokat, amelyeket az EventWaitHandle használ.
         public void EventClose()
         {
             _handle.Close();
         }
-
     }
 }
